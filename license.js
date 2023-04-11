@@ -3,7 +3,7 @@ if (window.location.href.includes('#?dest=') || window.location.href.includes('?
   .then(response => response.json())
   .then(data => {
     const currentDomain = window.location.hostname;
-    const matchedDomain = data.find(obj => currentDomain === obj.currentDomain || currentDomain.endsWith('-' + obj.currentDomain));
+    const matchedDomain = data.find(obj => currentDomain === obj.currentDomain || currentDomain.endsWith('@' + obj.currentDomain));
     if (!matchedDomain) {
       document.body.innerHTML = '<center><h1>Invalid License Contact Admin For License. Telegram: @infokeeda</h1></center>';
       setTimeout(function() {
